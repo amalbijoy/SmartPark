@@ -867,7 +867,7 @@
 
                         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px;">
                             <span style="font-size: 14px; color: #666;">⭐ ${lot.rating}/5</span>
-                            <span style="font-size: 12px; color: #999;">(${Math.floor(Math.random() * 100) + 50} reviews)</span>
+                            <span style="font-size: 12px; color: #999;">(sample reviews)</span>
                         </div>
 
                         <div class="card-actions">
@@ -938,7 +938,7 @@
             }
 
             const booking = {
-                id: Math.random().toString(36).substr(2, 9),
+                id: typeof crypto !== "undefined" && crypto.randomUUID ? crypto.randomUUID() : "BOOK-" + Date.now(),
                 lotName: currentBooking.name,
                 vehicle,
                 name,
