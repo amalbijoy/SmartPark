@@ -1,53 +1,53 @@
 # SmartPark
 
-> Parking availability and booking interface prototype using simulated parking-lot data.
+> Browser-based parking search and booking prototype using simulated parking-lot data.
 
 ## Overview
 
-SmartPark demonstrates a browser-based parking search and booking workflow. Users can filter facilities, compare prices and amenities, and create a mock booking.
+SmartPark demonstrates a parking discovery and mock-booking workflow. Users can filter sample facilities by location text, maximum hourly price, and amenities, then create a local mock booking.
 
-**Current implementation:** parking availability, prices, ratings, and facilities are simulated in client-side JavaScript. There is no live sensor or booking backend.
+The current application is **client-side only**. It has no live occupancy feed, sensor integration, booking backend, authentication service, or server-side persistence.
 
 ## Features
 
-- Search by location/area text
-- Maximum-price filtering
-- Amenity filtering
-- Availability display
+- Search by location or parking-lot name
+- Maximum hourly-price filter
+- Amenity filters
+- Availability display using sample data
 - Hourly and daily price comparison
-- Mock booking workflow with cost calculation
-- Responsive interface
+- Mock booking with local cost calculation
+- Responsive browser interface
+- Sample reviews and ratings
 
-## Tech stack
+## Data and limitations
 
-- HTML5
-- CSS3
-- JavaScript (ES6+)
-- Browser APIs
+Parking-lot names, occupancy/availability, prices, ratings, amenities, and reviews are sample data embedded in the page.
+
+The application does not contact a live parking provider or sensor network, and a booking is only a prototype interaction.
 
 ## Run locally
 
-Open `SmartPark.html` in a modern browser, or serve the directory:
+Open `SmartPark.html` directly, or serve the directory:
 
 ```bash
 python -m http.server 8000
 ```
 
-Then open `http://localhost:8000/SmartPark.html`.
+Then open:
 
-## Data and limitations
+```text
+http://localhost:8000/SmartPark.html
+```
 
-The application is a prototype. Facility names, occupancy, prices, ratings, and amenities are sample data and are not live parking availability.
+## Roadmap
 
-## Future work
-
-- Live occupancy or sensor integration
+- Live occupancy/sensor integration
 - Backend booking API
 - Authentication and booking history
-- Map/GPS navigation
+- Map/GPS integration
 - Server-side validation and persistence
-- Formal accessibility testing
+- Accessibility testing
 
 ## License
 
-GPL-3.0
+See [LICENSE](LICENSE).
